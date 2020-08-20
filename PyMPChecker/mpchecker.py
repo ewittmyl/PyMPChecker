@@ -215,6 +215,8 @@ PyMPChecker: ** WARNING ** nearest ephemeris file is >= 1 month away from target
                              unit=(u.hourangle, u.deg))
                 self.table['RA_deg'] = c.ra.deg
                 self.table['Dec_deg'] = c.dec.deg
+            else:
+                self.table = pd.DataFrame(columns=['name','dist','RA_str','Dec_str','mag','accuracy','RA_deg','Dec_deg'])
 
             end_calculate_t = time.time()
 
