@@ -107,6 +107,8 @@ class Checker:
             else:
                 self.n_results = 0
 
+                self.table = pd.DataFrame(columns=['name', 'dist', 'RA_deg', 'Dec_deg', 'mag', 'RA_off', 'Dec_off', 'comment'])
+
             end_calculate_t = time.time()
             self.online_search_run = True
 
